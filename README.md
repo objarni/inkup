@@ -4,7 +4,7 @@ inkup
 *inkup* is an attempt to write a Vagrantfile capable of building a
 virtual machine which can build Inkscape Trunk from sources.
 
-It uses a Lubuntu Desktop 14.04 VM as it's base.
+Base VM O/S is Lubuntu Desktop 14.04-64 bit.
 
 inkup was inspired by [this forum thread](http://inkscape.13.x6.nabble.com/Inkscape-with-Vagrant-Test-Inkscape-with-only-3-commands-td4969224.html|this thread).
 
