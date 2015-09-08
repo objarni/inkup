@@ -11,9 +11,9 @@ inkup was inspired by [this forum thread](http://inkscape.13.x6.nabble.com/Inksc
 To build Inkscape Trunk
 -----------------------
 
-  git clone <repo url> inkup
-  cd inkup
-  vagrant up
+1. git clone <repo url> inkup
+2. cd inkup
+3. vagrant up
 
 The provision-script is written inline inside the Vagrantfile, and
 basically adds the PPA for Inkscape Trunk to the VM, followed by
