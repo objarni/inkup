@@ -8,6 +8,14 @@ It uses a Lubuntu Desktop 14.04 VM as it's base.
 
 inkup was inspired by [this forum thread](http://inkscape.13.x6.nabble.com/Inkscape-with-Vagrant-Test-Inkscape-with-only-3-commands-td4969224.html|this thread).
 
+
+Dependencies
+------------
+You need [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/).
+
+Testing has been done on VirtualBox 4.3.26 and Vagrant 1.7.2.
+
+
 To build Inkscape Trunk
 -----------------------
 
