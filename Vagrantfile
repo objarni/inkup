@@ -63,7 +63,7 @@ Vagrant.configure(2) do |config|
 set -e
 sudo add-apt-repository -y ppa:inkscape.dev/trunk
 sudo apt-get update
-sudo apt-get -y build-dep inkscape
+sudo apt-get -y build-dep inkscape-trunk
 sudo apt-get -y install bzr ccache
 bzr checkout lp:inkscape
 cd inkscape
