@@ -11,7 +11,7 @@ inkup was inspired by [this forum thread](http://inkscape.13.x6.nabble.com/Inksc
 To build Inkscape Trunk
 -----------------------
 
-1. git clone <repo url> inkup
+1. git clone `repo url` inkup
 2. cd inkup
 3. vagrant up
 
