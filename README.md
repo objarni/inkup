@@ -16,7 +16,7 @@ Also during that weekend, I started writing this Vagrantfile, so the effort coul
 
 The VM
 ------
-The base VM O/S is Lubuntu Desktop 14.04-64 bit, which means you can log in and run your home-brewn Inkscape 
+The base VM O/S is Lubuntu Desktop 14.04-64 bit.
 
 
 Dependencies
