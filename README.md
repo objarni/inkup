@@ -13,9 +13,10 @@ However, every time I've started reading the build instructions, I've nearly fai
 The project is built in both C and C++, and it's got a huge list of intricate build dependencies,
 not only direct dependencies but also build system dependencies.
 
-After years of building up courage -- I spent a weekend making Inkscape compile, modified
-the rectangle tool to always place the result rectangle at (0, 0). What a feeling seeing
-the Inkscape built locally!
+After years of building up courage, I spent a weekend making Inkscape compile, then modified
+the Rectangle Tool to always place the resulting rectangle object at (0, 0) - and it worked!
+
+What a feeling seeing the Inkscape built locally!
 
 Also during that weekend, I developed this Vagrantfile in parallell, so the effort could be re-used
 for someone else and lower the threshold to build Inkscape from sources, thus hopefully lowering the
