@@ -13,7 +13,7 @@ Dependencies
 ------------
 You need [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/).
 
-Testing has been done on VirtualBox 4.3.26 and Vagrant 1.7.2.
+Tested on VirtualBox 4.3.10, 4.3.26 in combination with Vagrant 1.7.2 on Windows 7 and Ubuntu 14.04.
 
 
 To build Inkscape Trunk
