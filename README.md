@@ -35,15 +35,14 @@ The base VM O/S is Lubuntu Desktop 14.04-64 bit, which means you can log in and 
 
 Dependencies
 ------------
-You need [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/).
-
-Tested on VirtualBox 4.3.10, 4.3.26 in combination with Vagrant 1.7.2 on Windows 7 and Ubuntu 14.04.
+1. [VirtualBox](https://www.virtualbox.org/) - tested with version 4.3.10 in Ubuntu 14.04, and 4.3.26 in Windows 7.
+2. [Vagrant](https://www.vagrantup.com/) - tested with Vagrant 1.7.2.
 
 
 Building Inkscape Trunk
 -----------------------
 
-1. git clone `repo url`
+1. git clone git@github.com:objarni/inkup.git
 2. cd inkup
 3. vagrant up
 
