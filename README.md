@@ -7,7 +7,7 @@ virtual machine, which in turn can build Inkscape Trunk from sources.
 
 Why?
 ----
-I've been interested in contributing to the great Inkscape open source project for years.
+I've been interested in contributing to the great open source vector-graphics drawing application [Inkscape](https://inkscape.org/) open source project for years.
 
 However, every time I've started reading the build instructions, I've nearly fainted :).
 The project is built in both C and C++, and it's got a huge list of intricate build dependencies,
