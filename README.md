@@ -19,13 +19,13 @@ Tested on VirtualBox 4.3.10, 4.3.26 in combination with Vagrant 1.7.2 on Windows
 To build Inkscape Trunk
 -----------------------
 
-1. git clone `repo url` inkup
+1. git clone `repo url`
 2. cd inkup
 3. vagrant up
 
 The provision-script is written inline inside the Vagrantfile, and
 basically adds the PPA for Inkscape Trunk to the VM, followed by
-intsalling all packages necessary to build Inkscape from sources,
+installing all packages necessary to build Inkscape from sources,
 and finally builds Inkscape.
 
 
@@ -36,7 +36,6 @@ Once the build is finished (this will take at least 15 minutes, or
 more if you do not have the VM base image to start with), you can
 log into the VM using username 'vagrant' and password 'vagrant'.
 
-Then, navigate to /home/vagrant/src, where you will find the "inkscape"
-binary which is the fresh Inkscape Trunk build.
+The inkscape binary will be found at `/home/vagrant/inkscape/src/inkscape`.
 
 
