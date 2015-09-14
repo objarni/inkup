@@ -6,7 +6,7 @@ virtual machine, which in turn can build Inkscape Trunk from sources.
 
 
 Why?
-====
+----
 I've been interested in contributing to the great Inkscape open source project for years.
 
 However, every time I've started reading the build instructions, I've nearly fainted :).
@@ -39,7 +39,7 @@ You need [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virt
 Tested on VirtualBox 4.3.10, 4.3.26 in combination with Vagrant 1.7.2 on Windows 7 and Ubuntu 14.04.
 
 
-To build Inkscape Trunk
+Building Inkscape Trunk
 -----------------------
 
 1. git clone `repo url`
@@ -52,8 +52,8 @@ installing all packages necessary to build Inkscape from sources,
 and finally builds Inkscape.
 
 
-To run Inkscape Trunk
----------------------
+Running Inkscape Trunk
+----------------------
 
 Once the build is finished (this will take at least 15 minutes, or
 more if you do not have the VM base image to start with), you can
