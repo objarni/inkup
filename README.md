@@ -19,8 +19,7 @@ the Rectangle Tool to always place the resulting rectangle object at (0, 0) - an
 What a feeling seeing the Inkscape built locally!
 
 Also during that weekend, I developed this Vagrantfile in parallell, so the effort could be re-used
-for someone else and lower the threshold to build Inkscape from sources, thus hopefully lowering the
-threshold for more developers to contribute to Inkscape.
+for someone else and lower the threshold to build Inkscape from sources.
 
 It also means starting development of inkscape on a new computer, or a re-installed computer,
 is a breeze.
