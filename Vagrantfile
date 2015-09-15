@@ -4,11 +4,11 @@
 Vagrant.configure(2) do |config|
 
   config.vm.box = "janihur/ubuntu-1404-desktop"
-  config.vm.synced_folder ".", "/home/vagrant"
+  #config.vm.synced_folder "./inkscape", "/home/vagrant/inkscape"
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true
     vb.memory = "3000"
-    vb.cpus = 4
+    vb.cpus = 2
   end
 
   # PROVISION SCRIPT
@@ -24,7 +24,7 @@ export CFLAGS="-g -O0 -Wall" CC="ccache gcc"
 export CXXFLAGS="-g -O0 -Wall" CXX="ccache g++"
 ./autogen.sh
 ./configure
-make -j
+make -j 2
 sudo make install
 echo "Inkscape built successfully. To run inkscape:"
 echo "1. Login to the VM with user vagrant, password vagrant"
