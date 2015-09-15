@@ -8,6 +8,7 @@ Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true
     vb.memory = "3000"
+    vb.cpus = 4
   end
 
   # PROVISION SCRIPT
@@ -23,7 +24,7 @@ export CFLAGS="-g -O0 -Wall" CC="ccache gcc"
 export CXXFLAGS="-g -O0 -Wall" CXX="ccache g++"
 ./autogen.sh
 ./configure
-make
+make -j
 sudo make install
 echo "Inkscape built successfully. To run inkscape:"
 echo "1. Login to the VM with user vagrant, password vagrant"
