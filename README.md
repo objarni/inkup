@@ -11,7 +11,7 @@ After years of building up courage, I spent a weekend making Inkscape compile, t
 
 Also during that weekend, I started writing this Vagrantfile, so the effort could be re-used for someone else and lower the threshold to build Inkscape from sources. It also means starting development of inkscape on a new computer, or a re-installed computer, is a breeze.
 
-**inkup** was inspired by [this forum thread](http://inkscape.13.x6.nabble.com/Inkscape-with-Vagrant-Test-Inkscape-with-only-3-commands-td4969224.html|this thread).
+**inkup** was inspired by [this forum thread](http://inkscape.13.x6.nabble.com/Inkscape-with-Vagrant-Test-Inkscape-with-only-3-commands-td4969224.html).
 
 
 The VM
