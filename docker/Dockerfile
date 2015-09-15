@@ -7,7 +7,7 @@ RUN apt-get -y build-dep inkscape
 RUN apt-get -y install bzr ccache autopoint
 
 RUN mkdir -p /app/src
-WORKDIR /app
+WORKDIR /app/src
 VOLUME /app/src
 
 COPY build.sh /app/
