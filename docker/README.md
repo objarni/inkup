@@ -15,7 +15,7 @@ A more typical usage pattern might be this:
     $ docker build -t inkscape-build-env .
     ...
     $ mkdir src
-    $ docker run -dt -v `pwd`/src:/app/src:rw inkscape-build-env bash
+    $  docker run -it -v `pwd`/src:/app/src inkscape-build-env bash
     root@abcdef123:/app# build.sh
 
     $ # in another terminal
