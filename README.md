@@ -31,7 +31,7 @@ Building Inkscape Trunk
 2. cd inkup
 3. vagrant up
 
-The provision-script is written inline inside the Vagrantfile, and basically adds the PPA for Inkscape Trunk to the VM, followed by installing all packages necessary to build Inkscape from sources, and finally builds Inkscape.
+The provision-script is written inline inside the Vagrantfile, and basically adds the PPA for Inkscape Trunk to the VM, followed by installing all packages necessary to build Inkscape from sources, gets the Inkscape source from Launchpad (this step is quite slow; if you think the process has hanged after saying "You have not informed bzr of your Launchpad ID, ..." give it 30 more minutes to try and finish) and finally builds Inkscape.
 
 
 Running Inkscape Trunk
