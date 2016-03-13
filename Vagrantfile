@@ -19,6 +19,9 @@ sudo apt-get update
 sudo apt-get -y build-dep inkscape
 sudo apt-get -y install bzr ccache autopoint
 bzr checkout lp:inkscape
+# TODO: modify LUbuntu default shortcut Ctrl+Alt+T (it collides with Inkscape alignment shortcut)
+# TODO: add gedit or some other decent text editor to easy modification inside VM
+sudo chown vagrant inkscape/ -R  # to allow modifications and rebuild in VM
 cd inkscape
 export CFLAGS="-g -O0 -Wall" CC="ccache gcc"
 export CXXFLAGS="-g -O0 -Wall" CXX="ccache g++"
