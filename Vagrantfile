@@ -31,8 +31,14 @@ make -j 2
 sudo make install
 echo "Inkscape built successfully. To run inkscape:"
 echo "1. Login to the VM with user vagrant, password vagrant"
-echo "2. Run the binary /home/vagrant/inkscape/src/inkscape"
+echo "2. Make some changes in /home/vagrant/inkscape/src"
+echo "3. Re-build Inkscape*"
+echo "4. Run the binary /home/vagrant/inkscape/src/inkscape"
+echo "* This make line will filter out any warning, so you
+echo "  can focus on the errors:"
+echo "  make -j2 2>&1 >/dev/null | grep error"
   SHELL
+  
 
   config.vm.provision "shell", inline: $script
 end
