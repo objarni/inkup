@@ -28,8 +28,8 @@ Dependencies
 Building Inkscape Trunk
 -----------------------
 1. **git clone git@github.com:objarni/inkup.git** (or you could just download the Vagrantfile in this repo, and ignore git altogether)
-2. **cd inkup**
-3. **vagrant up**
+2. **cd inkup** (mkdir inkup if you ignored git!)
+3. **vagrant up** (this command needs Vagrantfile in the same directory to work!)
 4. **Enjoy the build process** Depending on your computers and network speed, wait from 30 mins to several hours (don't worry - rebuilding Inkscape from within the VM will be a lot faster!)
 
 The provision-script is written inline inside the Vagrantfile, and basically adds the PPA for Inkscape Trunk to the VM, followed by installing all packages necessary to build Inkscape from sources, gets the Inkscape source from Launchpad (this step is quite slow; if you think the process has hanged after saying "You have not informed bzr of your Launchpad ID, ..." give it 30 more minutes to try and finish) and finally builds Inkscape.
