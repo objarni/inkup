@@ -21,8 +21,8 @@ The base VM O/S is Lubuntu Desktop 14.04-64 bit.
 
 Dependencies
 ------------
-1. [VirtualBox](https://www.virtualbox.org/) - tested with version 4.3.10 in Ubuntu 14.04, and 4.3.26 in Windows 7.
-2. [Vagrant](https://www.vagrantup.com/) - tested with Vagrant 1.7.2.
+1. [VirtualBox](https://www.virtualbox.org/) - tested with version 4.3.10, 4.3.26 and 5.0.14, host OS Windows 7, Ubuntu 14.04 and 15.10.
+2. [Vagrant](https://www.vagrantup.com/) - tested with Vagrant 1.7.2 and 1.7.4.
 
 
 Building Inkscape Trunk
