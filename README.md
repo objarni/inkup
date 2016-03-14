@@ -5,7 +5,7 @@ inkup
 
 Why?
 ----
-I've been interested in contributing to the great open source vector-graphics editor [Inkscape](https://inkscape.org/) for years. However, every time I've started reading the build instructions, I've stopped because of all the build dependencies which would "mess up" my computer. The project is built in both C/C++ and Python (and probably more that I don't even know of!), and it's got a huge list of intricate build dependencies, not only direct dependencies but also build system dependencies.
+I've been interested in contributing to the great open source vector-graphics editor [Inkscape](https://inkscape.org/) for years. However, every time I've started reading the build instructions, I've stopped because of all the build dependencies which would "mess up" my computer. Inkscape is written primarily in C/C++, with extension support via an embedded Python interpreter -- and there's probably a lot more that I don't even know of. On top of that, it's got a huge list of build dependencies, not only direct dependencies but also build system dependencies.
 
 After years of building up courage, I spent a weekend making Inkscape compile, then modified the Rectangle Tool to always place the resulting rectangle object at (0, 0). What a feeling seeing Inkscape behaving in this irratic way because I told it to!
 
