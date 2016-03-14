@@ -27,7 +27,7 @@ Dependencies
 
 Building Inkscape Trunk
 -----------------------
-1. git clone git@github.com:objarni/inkup.git
+1. git clone git@github.com:objarni/inkup.git (you could just download the Vagrantfile in this repo, and ignore git)
 2. cd inkup
 3. vagrant up
 4. Depending on your computers' and network speed, wait from 30 mins to several hours
