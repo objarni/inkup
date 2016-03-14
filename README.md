@@ -1,3 +1,5 @@
+![alt tag](http://i.imgur.com/hrOux06.png)
+
 inkup
 =====
 **inkup** is an attempt to write a Vagrantfile capable of building a virtual machine, which in turn can build Inkscape Trunk from sources.
@@ -34,7 +36,7 @@ Building Inkscape Trunk
 
 
 What happens under the surface?
-===============================
+-------------------------------
 The provisioning script is defined in the Vagrantfile, and basically what it does is:
 
 1. Adds the PPA for Inkscape Trunk to the VM
@@ -44,7 +46,7 @@ The provisioning script is defined in the Vagrantfile, and basically what it doe
 5. Write a finished message with what you can do next (e.g. run Inkscape from within the VM)
 
 Hey! A weird Ubuntu looking Window pops up during build!
-========================================================
+--------------------------------------------------------
 Yeah, that is by design. You want to see Inkscape - after all it's a graphical editor, not some server software :)
 
 Just minimize the VM window during the build, and enter it when the build is finished to run your fresh, home-brewn version of Inkscape.
