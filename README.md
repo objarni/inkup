@@ -21,7 +21,7 @@ The base VM O/S is Lubuntu Desktop 14.04-64 bit.
 
 Dependencies
 ------------
-1. [VirtualBox](https://www.virtualbox.org/) - tested with version 4.3.10, 4.3.26 and 5.0.14, host OS Windows 7, Ubuntu 14.04 and 15.10. Make sure you enable virtualization technology in your BIOS PC boot settings.
+1. [VirtualBox](https://www.virtualbox.org/) - tested with version 4.3.10, 4.3.26 and 5.0.14, host OS Windows 7, Ubuntu 14.04 and 15.10. Make sure you enable virtualization technology in your UEFI/BIOS boot settings.
 2. [Vagrant](https://www.vagrantup.com/) - tested with Vagrant 1.7.2 and 1.7.4.
 
 
