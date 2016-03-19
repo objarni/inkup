@@ -57,4 +57,10 @@ Once the build is finished (this will take at least 15 minutes, or more if you d
 
 The Inkscape binary will be built to `/home/vagrant/inkscape/src/inkscape`.
 
+Caveats
+-------
 
+The shared folder feature of Vagrant / VirtualBox does not work so you cannot browse the source in your host OS
+which would be nicer than browsing and editing the source inside the VM. I get around this by downloading the
+Inkscape source on my host machine too, so I get fast navigation/source reading, and then I make changes in the
+VM using gedit or similar.
