@@ -11,7 +11,7 @@ I've been interested in contributing to the great open source vector-graphics ed
 
 After years of building up courage, I spent a weekend making Inkscape compile, then modified the Rectangle Tool to always place the resulting rectangle object at (0, 0). What a feeling seeing Inkscape behaving in this irratic way because I told it to!
 
-Also during that weekend, I started writing this Vagrantfile, so the effort could be re-used for someone else and lower the threshold to build Inkscape from sources. It also means starting development of Inkscape on a new computer, or a re-installed computer, is a breeze.
+Also during that weekend, I started writing this Vagrantfile, so the effort could be re-used for someone else and lower the threshold to build Inkscape from sources. It also means restarting development a breeze, e.g. if you re-install your OS or switch computer.
 
 **inkup** was inspired by [this forum thread](http://inkscape.13.x6.nabble.com/Inkscape-with-Vagrant-Test-Inkscape-with-only-3-commands-td4969224.html).
 
