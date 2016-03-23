@@ -55,7 +55,7 @@ Running Inkscape Trunk
 ----------------------
 Once the build is finished (this will take at least 15 minutes, or more if you do not have the VM base image to start with), you can log into the VM using username 'vagrant' and password 'vagrant'.
 
-The Inkscape binary will be built to `/home/vagrant/inkscape/src/inkscape`.
+The Inkscape binary will be built to `/home/vagrant/inkscape/src/inkscape` inside of the VM.
 
 Caveats
 -------
