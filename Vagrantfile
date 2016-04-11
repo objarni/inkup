@@ -25,7 +25,7 @@ sudo apt-get -y install bzr ccache autopoint
 # cmake build system
 sudo apt-get -y install cmake
 # GTK3.0 experimental building
-sudo apt-get -y install libgtk-3-dev libgdl-3-dev libgtkmm-3.0-dev
+sudo apt-get -y install libgtk-3-dev libgdl-3-dev libgtkmm-3.0-dev libgtkspell3-3-dev
 bzr checkout lp:inkscape
 
 # TODO: modify LUbuntu default shortcut Ctrl+Alt+T (it collides with Inkscape alignment shortcut)
