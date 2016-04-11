@@ -9,6 +9,7 @@ Vagrant.configure(2) do |config|
     vb.gui = true
     vb.memory = "3000"
     vb.cpus = 2
+    vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
   end
 
   # PROVISION SCRIPT
