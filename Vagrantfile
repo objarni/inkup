@@ -37,7 +37,7 @@ cd inkscape
 export CFLAGS="-g -O0 -Wall" CC="ccache gcc"
 export CXXFLAGS="-g -O0 -Wall -std=c++11" CXX="ccache g++"
 
-cmake . -D CMAKE_CXXFLAGS:STRING="$CXXFLAGS -std=c++11" -D WITH_GTK3_EXPERIMENTAL:BOOL=YES -D CMAKE_BUILD_TYPE:STRING=Debug
+cmake -D CMAKE_CXX_FLAGS:STRING="$CXXFLAGS -std=c++11" -D WITH_GTK3_EXPERIMENTAL:BOOL=YES -D CMAKE_BUILD_TYPE:STRING=Debug .
 
 
 #./autogen.sh
