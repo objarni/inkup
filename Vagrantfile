@@ -4,7 +4,6 @@
 Vagrant.configure(2) do |config|
 
   config.vm.box = "janihur/ubuntu-1404-desktop"
-  #config.vm.synced_folder "./inkscape", "/home/vagrant/inkscape"
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true
     vb.memory = "3000"
