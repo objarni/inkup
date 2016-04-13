@@ -52,6 +52,9 @@ export CXXFLAGS="-g -O0 -Wall -std=c++11"
 export CXX="ccache g++"
 cmake -D CMAKE_CXX_FLAGS:STRING="$CXXFLAGS" -D WITH_GTK3_EXPERIMENTAL:BOOL=YES -D CMAKE_BUILD_TYPE:STRING=Debug .
 
+# US keyboard not Finnish!
+setxkbmap -layout us
+
 # Old build system
 #./autogen.sh
 #./configure -enable-gtk3-experimental
