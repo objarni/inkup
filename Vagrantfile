@@ -32,6 +32,9 @@ sudo apt-get -y install libpotrace-dev
 # Source & build tools
 sudo apt-get -y install bzr ccache autopoint
 
+# Couple of editors
+sudo apt-get -y install gedit vim
+
 # cmake build system
 sudo apt-get -y install cmake
 
