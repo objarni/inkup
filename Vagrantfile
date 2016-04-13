@@ -14,38 +14,56 @@ Vagrant.configure(2) do |config|
 
   # PROVISION SCRIPT
   $script = <<-SHELL
+# Break on any error
 set -e
+
+# Add Inkscape trunk PPA 
 sudo add-apt-repository -y ppa:inkscape.dev/trunk
 sudo apt-get update
+
+# Minimal Inkscape dependencies
 sudo apt-get -y build-dep inkscape
-# cdr, visio file format support
+
+# Extra Inkscape dependencies: cdr, visio file format support
 sudo apt-get -y install libcdr-dev libvisio-dev
-# bitmap tracing and paintbucket
+
+# Extra Inkscape dependency for bitmap tracing and paintbucket
 sudo apt-get -y install libpotrace-dev
+
+# Source & build tools
 sudo apt-get -y install bzr ccache autopoint
+
 # cmake build system
 sudo apt-get -y install cmake
+
 # GTK3.0 experimental building
 sudo apt-get -y install libgtk-3-dev libgdl-3-dev libgtkmm-3.0-dev libgtkspell3-3-dev
+
+# Get the source!
 bzr checkout lp:inkscape
 
-# TODO: modify LUbuntu default shortcut Ctrl+Alt+T (it collides with Inkscape alignment shortcut)
-# TODO: add gedit or some other decent text editor to easy modification inside VM
-# TODO: add english keyboard instead of finish
+# To enable rebuilding inside VM (file modifications)
+sudo chown vagrant inkscape/ -R
 
-sudo chown vagrant inkscape/ -R  # to allow modifications and rebuild in VM
+# Create Makefiles with cmake build system
 cd inkscape
-export CFLAGS="-g -O0 -Wall" CC="ccache gcc"
-export CXXFLAGS="-g -O0 -Wall -std=c++11" CXX="ccache g++"
+export CFLAGS="-g -O0 -Wall"
+export CC="ccache gcc"
+export CXXFLAGS="-g -O0 -Wall -std=c++11"
+export CXX="ccache g++"
+cmake -D CMAKE_CXX_FLAGS:STRING="$CXXFLAGS" -D WITH_GTK3_EXPERIMENTAL:BOOL=YES -D CMAKE_BUILD_TYPE:STRING=Debug .
 
-cmake -D CMAKE_CXX_FLAGS:STRING="$CXXFLAGS -std=c++11" -D WITH_GTK3_EXPERIMENTAL:BOOL=YES -D CMAKE_BUILD_TYPE:STRING=Debug .
-
-
+# Old build system
 #./autogen.sh
 #./configure -enable-gtk3-experimental
 
+# Compile Inkscape
 make -j 2
+
+# Install newly built Inkscape
 sudo make install
+
+# Finished!
 echo "Inkscape built successfully. To run inkscape:"
 echo "1. Login to the VM with user vagrant, password vagrant"
 echo "2. Make some changes in /home/vagrant/inkscape/src"
