@@ -56,6 +56,9 @@ export CXXFLAGS="-g -O0 -Wall -std=c++11"
 export CXX="ccache g++"
 cmake -D CMAKE_CXX_FLAGS:STRING="$CXXFLAGS" -D WITH_GTK3_EXPERIMENTAL:BOOL=YES -D CMAKE_BUILD_TYPE:STRING=Debug ../inkscape
 
+# To enable rebuilding inside VM (file modifications)
+sudo chown vagrant build-inkscape/ -R
+
 # US keyboard not Finnish!
 echo "setxkbmap -layout us" >>/home/vagrant/.bashrc
 
