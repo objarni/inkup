@@ -57,7 +57,7 @@ export CXX="ccache g++"
 cmake -D CMAKE_CXX_FLAGS:STRING="$CXXFLAGS" -D WITH_GTK3_EXPERIMENTAL:BOOL=YES -D CMAKE_BUILD_TYPE:STRING=Debug ../inkscape
 
 # US keyboard not Finnish!
-setxkbmap -layout us
+echo "setxkbmap -layout us" >>/home/vagrant/.bashrc
 
 # Old build system
 #./autogen.sh
