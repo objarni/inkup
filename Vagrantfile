@@ -42,14 +42,15 @@ sudo apt-get -y install cmake
 sudo apt-get -y install libgtk-3-dev libgdl-3-dev libgtkmm-3.0-dev libgtkspell3-3-dev
 
 # Get the source!
+cd /home/vagrant
 bzr checkout lp:inkscape
 
 # To enable rebuilding inside VM (file modifications)
-sudo chown vagrant inkscape/ -R
+sudo chown vagrant home/vagrant/inkscape/ -R
 
 # Create Makefiles with cmake build system
-mkdir build-inkscape
-cd build-inkscape
+mkdir /home/vagrant/build-inkscape
+cd /home/vagrant/build-inkscape
 export CFLAGS="-g -O0 -Wall"
 export CC="ccache gcc"
 export CXXFLAGS="-g -O0 -Wall -std=c++11"
@@ -57,7 +58,7 @@ export CXX="ccache g++"
 cmake -D CMAKE_CXX_FLAGS:STRING="$CXXFLAGS" -D WITH_GTK3_EXPERIMENTAL:BOOL=YES -D CMAKE_BUILD_TYPE:STRING=Debug ../inkscape
 
 # To enable rebuilding inside VM (file modifications)
-sudo chown vagrant build-inkscape/ -R
+sudo chown vagrant home/vagrant/build-inkscape/ -R
 
 # US keyboard not Finnish!
 echo "setxkbmap -layout us" >>/home/vagrant/.bashrc
