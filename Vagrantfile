@@ -48,12 +48,13 @@ bzr checkout lp:inkscape
 sudo chown vagrant inkscape/ -R
 
 # Create Makefiles with cmake build system
-cd inkscape
+mkdir build-inkscape
+cd build-inkscape
 export CFLAGS="-g -O0 -Wall"
 export CC="ccache gcc"
 export CXXFLAGS="-g -O0 -Wall -std=c++11"
 export CXX="ccache g++"
-cmake -D CMAKE_CXX_FLAGS:STRING="$CXXFLAGS" -D WITH_GTK3_EXPERIMENTAL:BOOL=YES -D CMAKE_BUILD_TYPE:STRING=Debug .
+cmake -D CMAKE_CXX_FLAGS:STRING="$CXXFLAGS" -D WITH_GTK3_EXPERIMENTAL:BOOL=YES -D CMAKE_BUILD_TYPE:STRING=Debug ../inkscape
 
 # US keyboard not Finnish!
 setxkbmap -layout us
