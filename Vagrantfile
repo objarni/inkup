@@ -16,6 +16,9 @@ Vagrant.configure(2) do |config|
 # Break on any error
 set -e
 
+# US keyboard not Finnish!
+sudo echo "setxkbmap -layout us" >>/home/vagrant/.bashrc
+
 # Add Inkscape trunk PPA 
 sudo add-apt-repository -y ppa:inkscape.dev/trunk
 sudo apt-get update
@@ -45,9 +48,6 @@ sudo apt-get -y install libgtk-3-dev libgdl-3-dev libgtkmm-3.0-dev libgtkspell3-
 cd /home/vagrant
 bzr checkout lp:inkscape
 
-# To enable rebuilding inside VM (file modifications)
-sudo chown vagrant home/vagrant/inkscape/ -R
-
 # Create Makefiles with cmake build system
 mkdir /home/vagrant/build-inkscape
 cd /home/vagrant/build-inkscape
@@ -58,19 +58,16 @@ export CXX="ccache g++"
 cmake -D CMAKE_CXX_FLAGS:STRING="$CXXFLAGS" -D WITH_GTK3_EXPERIMENTAL:BOOL=YES -D CMAKE_BUILD_TYPE:STRING=Debug ../inkscape
 
 # To enable rebuilding inside VM (file modifications)
-sudo chown vagrant home/vagrant/build-inkscape/ -R
-
-# US keyboard not Finnish!
-echo "setxkbmap -layout us" >>/home/vagrant/.bashrc
+sudo chown vagrant /home/vagrant/inkscape/ -R
+sudo chown vagrant /home/vagrant/build-inkscape/ -R
 
 # Old build system
 #./autogen.sh
 #./configure -enable-gtk3-experimental
 
-# Compile Inkscape
+# Compile & install Inkscape
+cd /home/vagrant/build-inkscape
 make -j 2
-
-# Install newly built Inkscape
 sudo make install
 
 # Finished!
