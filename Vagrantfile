@@ -23,6 +23,17 @@ sudo echo "setxkbmap -layout us" >>/home/vagrant/.bashrc
 sudo add-apt-repository -y ppa:inkscape.dev/trunk
 sudo apt-get update
 
+# Build tools
+sudo apt-get -y install bzr
+
+# Get the source!
+cd /home/vagrant
+bzr checkout lp:inkscape
+
+# Install Google Test Framework
+cd /home/vagrant/inkscape
+sudo ./download-gtest.sh
+
 # Minimal Inkscape dependencies
 sudo apt-get -y build-dep inkscape
 
@@ -32,8 +43,8 @@ sudo apt-get -y install libcdr-dev libvisio-dev
 # Extra Inkscape dependency for bitmap tracing and paintbucket
 sudo apt-get -y install libpotrace-dev
 
-# Source & build tools
-sudo apt-get -y install bzr ccache autopoint
+# Build tools
+sudo apt-get -y install ccache autopoint
 
 # Couple of editors
 sudo apt-get -y install gedit vim
@@ -43,10 +54,6 @@ sudo apt-get -y install cmake
 
 # GTK3.0 experimental building
 sudo apt-get -y install libgtk-3-dev libgdl-3-dev libgtkmm-3.0-dev libgtkspell3-3-dev
-
-# Get the source!
-cd /home/vagrant
-bzr checkout lp:inkscape
 
 # Create Makefiles with cmake build system
 mkdir /home/vagrant/build-inkscape
