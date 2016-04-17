@@ -1,5 +1,6 @@
 ![alt tag](http://i.imgur.com/hrOux06.png)
 
+
 inkup
 =====
 **inkup** is an attempt to write a Vagrantfile capable of building a virtual machine, which in turn can build Inkscape Trunk from sources.
@@ -45,21 +46,23 @@ The provisioning script is defined in the Vagrantfile, and basically what it doe
 4. Builds Inkscape
 5. Write a finished message with what you can do next (e.g. run Inkscape from within the VM)
 
+
 Hey! A weird Ubuntu looking Window pops up during build!
 --------------------------------------------------------
 Yeah, that is by design. You want to see Inkscape - after all it's a graphical editor, not some server software :)
 
 Just minimize the VM window during the build, and enter it when the build is finished to run your fresh, home-brewn version of Inkscape.
 
+
 Running Inkscape Trunk
 ----------------------
 Once the build is finished (this will take at least 15 minutes, or more if you do not have the VM base image to start with), you can log into the VM using username 'vagrant' and password 'vagrant'.
 
-The Inkscape binary will be built to `/home/vagrant/inkscape/src/inkscape` inside of the VM.
+The Inkscape binary will be built to `/home/vagrant/build-inkscape/bin/inkscape` inside of the VM.
+
 
 Caveats
 -------
-
 The shared folder feature of Vagrant / VirtualBox does not work so you cannot browse the source in your host OS
 which would be nicer than browsing and editing the source inside the VM. I get around this by downloading the
 Inkscape source on my host machine too, so I get fast navigation/source reading, and then I make changes in the
