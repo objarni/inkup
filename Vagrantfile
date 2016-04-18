@@ -28,6 +28,7 @@ sudo apt-get -y install bzr
 
 # Get the source!
 cd /home/vagrant
+echo "Fetching Inkscape source..."
 bzr checkout lp:inkscape
 
 # Install Google Test Framework
