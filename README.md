@@ -71,6 +71,7 @@ To update and rebuild Inkscape, you need to get your hands dirty and work from i
 5. make
 
 If you get into a messed-up state:
+
 1. cd ~/build-inkscape
 2. cmake clean-cmake-files
 3. cmake ../inkscape
