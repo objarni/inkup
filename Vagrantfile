@@ -19,6 +19,9 @@ set -e
 # US keyboard not Finnish!
 sudo echo "setxkbmap -layout us" >>/home/vagrant/.bashrc
 
+# SE .deb source instead of FI
+sudo sed -e 's/fi.archive/se.archive/' -i /etc/apt/sources.list
+
 # Add Inkscape trunk PPA 
 sudo add-apt-repository -y ppa:inkscape.dev/trunk
 sudo apt-get update
