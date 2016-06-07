@@ -87,7 +87,7 @@ echo "4. Run the binary /home/vagrant/build-inkscape/bin/inkscape"
 echo ""
 echo "*To build inkscape showing only errors (no warnings):"
 echo ""
-echo "      make -j2 2>&1 >/dev/null | grep error"
+echo "      make -j 2>&1 >/dev/null | grep error"
   SHELL
   
 
