@@ -35,9 +35,8 @@ Building Inkscape Trunk
 3. **vagrant up** (this command needs Vagrantfile in the same directory to work!)
 4. **Enjoy the build process** Depending on your computers and network speed, wait from 30 mins to several hours (don't worry - rebuilding Inkscape from within the VM will be a lot faster!)
 
-
-What happens under the surface?
--------------------------------
+What happens on "vagrant up"?
+-----------------------------
 The provisioning script is defined in the Vagrantfile, and basically what it does is:
 
 1. Adds the PPA for Inkscape Trunk to the VM
@@ -59,6 +58,23 @@ Running Inkscape Trunk
 Once the build is finished (this will take at least 15 minutes, or more if you do not have the VM base image to start with), you can log into the VM using username 'vagrant' and password 'vagrant'.
 
 The Inkscape binary will be built to `/home/vagrant/build-inkscape/bin/inkscape` inside of the VM.
+
+
+Updating and rebuilding
+-----------------------
+To update and rebuild Inkscape, you need to get your hands dirty and work from inside the VM.
+
+1. Step into the VM (user/pw vagrant/vagrant)
+2. cd inkscape
+3. bzr update
+4. cd ../build-inkscape
+5. make
+
+If you get into a messed-up state:
+1. cd ~/build-inkscape
+2. cmake clean-cmake-files
+3. cmake ../inkscape
+4. make
 
 
 Caveats
