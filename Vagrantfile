@@ -51,7 +51,7 @@ sudo apt-get -y install ccache autopoint
 sudo apt-get -y install gedit vim
 
 # cmake build system
-sudo apt-get -y install cmake
+sudo apt-get -y install cmake cmake-curses-gui
 
 # GTK3.0 experimental building
 sudo apt-get -y install libgtk-3-dev libgdl-3-dev libgtkmm-3.0-dev libgtkspell3-3-dev
