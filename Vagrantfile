@@ -7,8 +7,9 @@ Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true
     vb.memory = "3000"
-    vb.cpus = 2
+    vb.cpus = 4
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+    v.customize ["modifyvm", :id, "--vram", "12"]
   end
 
   # PROVISION SCRIPT
