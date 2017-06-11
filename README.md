@@ -41,7 +41,7 @@ The provisioning script is defined in the Vagrantfile, and basically what it doe
 
 1. Adds the PPA for Inkscape Trunk to the VM
 2. Installing all packages necessary to build Inkscape from sources
-3. Gets the Inkscape source from Launchpad (this step is quite slow; if you think the process has hanged after saying "You have not informed bzr of your Launchpad ID, ..." give it 30 more minutes to try and finish)
+3. Gets the Inkscape source
 4. Builds Inkscape
 5. Write a finished message with what you can do next (e.g. run Inkscape from within the VM)
 
@@ -64,7 +64,7 @@ To update and rebuild Inkscape, you need to get your hands dirty and work from i
 1. Step into the VM (user/pw vagrant/vagrant), decline the update
 2. Open a terminal (Menu at bottom left, System Tools > XTerm)
 3. cd inkscape
-4. bzr update
+4. git pull
 5. cd ../build-inkscape
 6. make
 
