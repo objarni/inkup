@@ -10,7 +10,7 @@ Vagrant.configure(2) do |config|
     vb.cpus = 4
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
     vb.customize ["modifyvm", :id, "--vram", "12"]
-    vm.synced_folder "C:/HostFolder", "/home/vagrant/inkscape/", disabled: true
+    vb.synced_folder "C:/HostFolder", "/home/vagrant/inkscape/", disabled: true
   end
 
   # PROVISION SCRIPT
