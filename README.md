@@ -37,14 +37,13 @@ Building Inkscape Trunk
 
 What happens on "vagrant up"?
 -----------------------------
-The provisioning script is defined in the Vagrantfile, and basically what it does is:
+The provisioning script is defined in the Vagrantfile, and basically what it does is. When you type "vagrant up", first it will download a Lubuntu 14.04 virtual machine image, then the provisioning script will do:
 
 1. Adds the PPA for Inkscape Trunk to the VM
 2. Installing all packages necessary to build Inkscape from sources
-3. Gets the Inkscape source from Launchpad (this step is quite slow; if you think the process has hanged after saying "You have not informed bzr of your Launchpad ID, ..." give it 30 more minutes to try and finish)
+3. Gets the Inkscape source
 4. Builds Inkscape
 5. Write a finished message with what you can do next (e.g. run Inkscape from within the VM)
-
 
 Hey! A weird Ubuntu looking Window pops up during build!
 --------------------------------------------------------
@@ -52,23 +51,22 @@ Yeah, that is by design. You want to see Inkscape - after all it's a graphical e
 
 Just minimize the VM window during the build, and enter it when the build is finished to run your fresh, home-brewn version of Inkscape.
 
-
 Running Inkscape Trunk
 ----------------------
 Once the build is finished (this will take at least 15 minutes, or more if you do not have the VM base image to start with), you can log into the VM using username 'vagrant' and password 'vagrant'.
 
 The Inkscape binary will be built to `/home/vagrant/build-inkscape/bin/inkscape` inside of the VM.
 
-
 Updating and rebuilding
 -----------------------
 To update and rebuild Inkscape, you need to get your hands dirty and work from inside the VM.
 
-1. Step into the VM (user/pw vagrant/vagrant)
-2. cd inkscape
-3. bzr update
-4. cd ../build-inkscape
-5. make
+1. Step into the VM (user/pw vagrant/vagrant), decline the update
+2. Open a terminal (Menu at bottom left, System Tools > XTerm)
+3. cd inkscape
+4. git pull
+5. cd ../build-inkscape
+6. make
 
 If you get into a messed-up state:
 
@@ -76,7 +74,6 @@ If you get into a messed-up state:
 2. cmake clean-cmake-files
 3. cmake ../inkscape
 4. make
-
 
 Caveats
 -------
