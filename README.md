@@ -63,10 +63,10 @@ To update and rebuild Inkscape, you need to get your hands dirty and work from i
 
 1. Step into the VM (user/pw vagrant/vagrant), decline the update
 2. Open a terminal (Menu at bottom left, System Tools > XTerm)
-2. cd inkscape
-3. bzr update
-4. cd ../build-inkscape
-5. make
+3. cd inkscape
+4. bzr update
+5. cd ../build-inkscape
+6. make
 
 If you get into a messed-up state:
 
