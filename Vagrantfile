@@ -27,13 +27,16 @@ sudo sed -e 's/fi.archive/se.archive/' -i /etc/apt/sources.list
 sudo add-apt-repository -y ppa:inkscape.dev/trunk
 sudo apt-get update
 
-# Build tools
-sudo apt-get -y install bzr
+# Source control
+sudo apt-get -y install git
 
 # Get the source!
 cd /home/vagrant
 echo "Fetching Inkscape source..."
-bzr checkout lp:inkscape
+git clone git@gitlab.com:inkscape/inkscape.git
+
+# Old Bazaar based source checkout
+#bzr checkout lp:inkscape
 
 # Install Google Test Framework
 cd /home/vagrant/inkscape
