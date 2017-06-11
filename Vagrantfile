@@ -35,7 +35,7 @@ sudo apt-get -y install git
 # Get the source!
 cd /home/vagrant
 echo "Fetching Inkscape source..."
-git clone git@gitlab.com:inkscape/inkscape.git
+git clone https://github.com/inkscape/inkscape.git
 
 # Old Bazaar based source checkout
 #bzr checkout lp:inkscape
