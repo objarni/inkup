@@ -39,11 +39,12 @@ What happens on "vagrant up"?
 -----------------------------
 The provisioning script is defined in the Vagrantfile, and basically what it does is:
 
-1. Adds the PPA for Inkscape Trunk to the VM
-2. Installing all packages necessary to build Inkscape from sources
-3. Gets the Inkscape source from Launchpad (this step is quite slow; if you think the process has hanged after saying "You have not informed bzr of your Launchpad ID, ..." give it 30 more minutes to try and finish)
-4. Builds Inkscape
-5. Write a finished message with what you can do next (e.g. run Inkscape from within the VM)
+1. Downloads and imports a Lubuntu 14.04 virtual machine image for VirtualBox
+2. Adds the PPA for Inkscape Trunk to the VM
+3. Installing all packages necessary to build Inkscape from sources
+4. Gets the Inkscape source from Launchpad (this step is quite slow; if you think the process has hanged after saying "You have not informed bzr of your Launchpad ID, ..." give it 30 more minutes to try and finish)
+5. Builds Inkscape
+6. Write a finished message with what you can do next (e.g. run Inkscape from within the VM)
 
 
 Hey! A weird Ubuntu looking Window pops up during build!
@@ -64,7 +65,8 @@ Updating and rebuilding
 -----------------------
 To update and rebuild Inkscape, you need to get your hands dirty and work from inside the VM.
 
-1. Step into the VM (user/pw vagrant/vagrant)
+1. Step into the VM (user/pw vagrant/vagrant), decline the update
+2. Open a terminal (Menu at bottom left, System Tools > XTerm)
 2. cd inkscape
 3. bzr update
 4. cd ../build-inkscape
