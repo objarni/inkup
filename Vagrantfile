@@ -4,13 +4,14 @@
 Vagrant.configure(2) do |config|
 
   config.vm.box = "janihur/ubuntu-1404-desktop"
+  config.vm.synced_folder "C:/HostFolder", "/home/vagrant/inkscape/", disabled: true
+
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true
     vb.memory = "3000"
     vb.cpus = 4
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
     vb.customize ["modifyvm", :id, "--vram", "12"]
-    vb.synced_folder "C:/HostFolder", "/home/vagrant/inkscape/", disabled: true
   end
 
   # PROVISION SCRIPT
