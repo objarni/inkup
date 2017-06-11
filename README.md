@@ -37,7 +37,8 @@ Building Inkscape Trunk
 
 What happens on "vagrant up"?
 -----------------------------
-The provisioning script is defined in the Vagrantfile, and basically what it does is. When you type "vagrant up", first it will download a Lubuntu 14.04 virtual machine image, then the provisioning script will do:
+The provisioning script is defined in the Vagrantfile.  
+When you type "vagrant up", first it will download a Lubuntu 14.04 virtual machine image, then the provisioning script will do this:
 
 1. Adds the PPA for Inkscape Trunk to the VM
 2. Installing all packages necessary to build Inkscape from sources
